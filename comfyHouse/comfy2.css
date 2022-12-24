@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+   /* border: 1px solid black; */
+   
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+:root {
+  --mainColor: rgb(231, 226, 221);
+  --success: rgb(136, 77, 9);
+}
+
+
+
+/* navbar starts here */
+.navbar {
+  height: 10vh;
+  background-color: var(--mainColor);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.nav-main {
+  height: 10vh;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.nav-title-black {
+  letter-spacing: 0.3rem;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+.nav-title-yellow {
+  font-size: 1.4rem;
+  letter-spacing: 0.5rem;
+  font-weight: bolder;
+  color: var(--success);
+}
+.nav-cart,
+.bar-icon {
+  font-size: 1.5rem;
+  transition: right 0.2s ease-in;
+  cursor: pointer;
+}
+.cart-icon {
+  position: relative;
+}
+.cart-item {
+  position: absolute;
+  padding: 0 5px;
+  border-radius: 30%;
+  top: -7px;
+  left: 12px;
+  background: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+/* navbar ends here */
+
+
+
+
+.shopped-section {
+  padding-bottom: 5rem;
+  width: 70%;
+  padding: 1rem 2rem;
+  min-height: 100vh;
+  margin: auto;
+  z-index: 5;
+  transition: right 0.2s ease-in;
+  padding-bottom: 3rem;
+}
+.shopped-item-cont {
+  
+  min-height: 100vh;
+  /* overflow-y: scroll; */
+  width: 95%;
+  margin: 0 0.5rem 0 auto;
+  min-height: 0vh;
+}
+.close-btn {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.shopped-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.shopped-items {
+  min-height: 0vh;
+  width: 100%;
+}
+.shopped-item {
+  padding-top: 0.2rem;
+  background-color: rgb(252, 250, 250);
+  margin: auto;
+  width: 50% ;
+  border: 3px solid black;
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding-right: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.shopped-item-img {
+  flex-basis: 40%;
+
+}
+
+ .shopped-item-img img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  /* object-fit: fill; */
+} 
+
+.shopped-item-details {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bolder;
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  /* font-size: 0; */
+}
+.shopped-item-price {
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+.shopped-item-remove {
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: rgb(136, 77, 9);
+}
+.shopped-item-remove h4:hover {
+  color: red;
+}
+.shopped-item-btn {
+  display: flex;
+  width: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.shopped-icon {
+  color: rgb(136, 77, 9);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.shopped-total {
+  width: 100%;
+  margin-top: 2rem;
+  min-height: 5vh;
+  text-align: center;
+  font-family: monospace;
+}
+
+.btn-div {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.clear-btn {
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+border-radius: 5px;
+  padding: 0.4rem 1.2rem;
+  background-color: rgb(180, 19, 19);
+
+  border: 2px solid rgb(180, 19, 19);
+  color: white;
+  margin-top: 1rem;
+}
+.checkout-btn {
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+border-radius: 5px;
+  padding: 0.4rem 1rem;
+  background-color: rgb(29, 68, 3);
+
+  border: 2px solid rgb(29, 68, 3);
+  color: white;
+  margin-top: 1rem;
+}
+.checkout-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(29, 68, 3);
+}
+.clear-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(180, 19, 19);
+}
+
+.emptyCart {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  
+}
+.emptyBtn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bolder;
+  border: none;
+  background-color: rgb(29, 68, 3);
+  color: white;
+
+}
+
+.emptyBtn:hover{
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  border: 1px solid rgb(29, 68, 3) ;
+  background-color: white;
+  color: rgb(29, 68, 3);
+
+}
+
+@media (max-width: 1200px) {
+  .shopped-section {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .shopped-section {
+    width: 50%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .shopped-section {
+    width: 100%;
+    padding: 0.5rem 1.2rem;
+  }
+}

@@ -1,0 +1,236 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+:root {
+  --mainColor: rgb(231, 226, 221);
+  --success: rgb(136, 77, 9);
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.page {
+  width: 100%;
+  min-height: 0vh;
+}
+
+/* navbar starts here */
+.navbar {
+  height: 10vh;
+  background-color: var(--mainColor);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.nav-main {
+  height: 10vh;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.nav-title-black {
+  letter-spacing: 0.3rem;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+.nav-title-yellow {
+  font-size: 1.4rem;
+  letter-spacing: 0.5rem;
+  font-weight: bolder;
+  color: var(--success);
+}
+.nav-cart,
+.bar-icon {
+  font-size: 1.5rem;
+  transition: right 0.2s ease-in;
+  cursor: pointer;
+}
+.cart-icon {
+  position: relative;
+}
+.cart-item {
+  position: absolute;
+  padding: 0 5px;
+  border-radius: 30%;
+  top: -7px;
+  left: 12px;
+  background: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+/* navbar ends here */
+
+/* MAIN STARTS HERE */
+.main {
+  min-height: 90vh;
+  background: url(images/imagecompressor/pexels-pixabay-271795-min.jpg) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.main-banner {
+  width: 60%;
+  min-height: 10rem;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  text-align: center;
+}
+.banner-title {
+  font-size: 3.5rem;
+  font: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+}
+
+.banner-btn {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--success);
+  background-color: var(--success);
+  border-radius: 0.625rem;
+  cursor: pointer;
+}
+.banner-btn:hover {
+  transform: scale(1.02);
+  background-color: rgb(255, 255, 255);
+}
+.banner-btn a {
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  color: rgb(255,255,255);
+  
+}
+.banner-btn:hover a {
+  color: var(--success);
+}
+/* MAIN ENDS HERE */
+
+/* SECTION STARTS HERE */
+.product-class {
+  margin-top: 5rem;
+  min-height: 0vh;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.product-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 1.2rem;
+}
+.product-cont {
+  width: 85%;
+  margin: auto;
+  min-height: 0vh;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); */
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  place-items: center;
+  gap: 1.5rem;
+  row-gap: 4rem;
+}
+.product {
+  min-height: 5vh;
+  width: 17rem;
+  text-align: center;
+}
+
+
+.product-img {
+  width: 100%;
+  height: 12rem;
+  margin-bottom: 0.7rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.product-img img {
+  width: 100%;
+  height: 12rem;
+  /* object-fit: cover; */
+}
+.product-img:hover img {
+  opacity: 0.5;
+}
+
+.product-price {
+  margin-top: 0.7rem;
+  font-weight: bold;
+  color: var(--success);
+}
+.product-slide {
+  padding: 0.2rem 0.8rem;
+  border-radius: 10px 0 0 10px;
+  background: var(--success);
+  position: absolute;
+  color: rgb(0, 0, 0);
+  font-family: monospace;
+  right: -100%;
+  top: 70%;
+  transition: right 0.2s ease-in;
+}
+.product-img:hover .product-slide {
+  right: 0;
+}
+.product-slide:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+.display-sec {
+  font-family: cursive;
+  width: 100%;
+  font-size: 1.5rem;
+  min-height: 0vh;
+  position: fixed;
+  top: 50%;
+  text-align: center;
+  display: none;
+  color: var(--success);
+  /* color: rgba(0, 0, 0, 0.568); */
+  margin: auto;
+
+}
+/* SECTION ENDS HERE */
+
+/* media query for mobile screen */
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+  .nav-main {
+    width: 90%;
+  }
+  .main-banner {
+    width: 90%;
+    min-height: 10rem;
+
+    padding: 1rem 2rem;
+  }
+  .banner-title {
+    font-size: 2rem;
+  }
+  .nav-title-black,
+  .nav-title-yellow {
+    letter-spacing: 0.3rem;
+  }
+}
