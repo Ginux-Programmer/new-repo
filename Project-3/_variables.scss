@@ -1,0 +1,24 @@
+$xsm: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+$xl: 1399px;
+$xxl: 5000px;
+//utilities
+$s-lg: 16px;
+$s-md: 14px;
+$s-sm: 12px;
+$border: 1px solid black;
+//button
+@mixin button {
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgb(17, 6, 107);
+    color: rgb(17, 6, 107);
+    font-weight: bold;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
